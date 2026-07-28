@@ -1,0 +1,58 @@
+/* ==========================================
+   GLOBAL STYLES
+   Project : RCPMS
+========================================== */
+
+@import url("./reset.css");
+@import url("./variables.css");
+@import url("./utilities.css");
+
+body{
+    font-family:"Poppins",sans-serif;
+    background:var(--background);
+    color:var(--text);
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-weight:600;
+}
+
+p{
+    color:var(--text-light);
+    line-height:1.6;
+}
+
+input{
+    width:100%;
+    padding:14px 16px;
+    border:1px solid var(--border);
+    border-radius:var(--radius);
+    outline:none;
+    transition:var(--transition);
+    background:#fff;
+}
+
+input:focus{
+    border-color:var(--primary);
+}
+
+button{
+    width:100%;
+    padding:14px;
+    background:var(--primary);
+    color:#fff;
+    border:none;
+    border-radius:var(--radius);
+    font-weight:600;
+    transition:var(--transition);
+}
+
+button:hover{
+    background:var(--primary-dark);
+}
+
+label{
+    display:block;
+    margin-bottom:8px;
+    font-weight:500;
+}
