@@ -1,0 +1,17 @@
+Project : RCPMS
+
+Completed Modules
+
+? Login UI
+? Firebase Setup
+? Authentication
+
+Pending
+
+? Dashboard
+? Stock
+? Sales
+? Credits
+? Attendance
+? Salary
+? Reports
