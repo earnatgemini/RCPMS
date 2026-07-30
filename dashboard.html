@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Dashboard</title>
+
+<link rel="preconnect"
+href="https://fonts.googleapis.com">
+
+<link rel="preconnect"
+href="https://fonts.gstatic.com"
+crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
+rel="stylesheet">
+
+<link rel="stylesheet"
+href="css/style.css">
+
+<link rel="stylesheet"
+href="css/dashboard.css">
+
+</head>
+
+<body>
+
+<div class="dashboard">
+
+<aside class="sidebar">
+
+<h2>RCPMS</h2>
+
+<nav>
+
+<a href="#">?? Dashboard</a>
+
+<a href="#">?? Stock</a>
+
+<a href="#">?? Sales</a>
+
+<a href="#">?? Expenses</a>
+
+<a href="#">?? Employees</a>
+
+<a href="#">?? Reports</a>
+
+<a href="#" id="manageBranches">
+?? Branches
+</a>
+
+<a href="#" id="sideLogoutBtn">
+?? Logout
+</a>
+
+</nav>
+
+</aside>
+
+<main class="content">
+
+<div class="topbar">
+
+<div>
+
+<h1>Dashboard</h1>
+
+<p id="userEmail"></p>
+
+</div>
+
+<button id="topLogoutBtn">
+Logout
+</button>
+
+</div>
+
+<div id="dashboardView">
+
+<div class="cards">
+
+<div class="card">
+<h3>Today's Sales</h3>
+<h2>?0</h2>
+</div>
+
+<div class="card">
+<h3>Today's Expenses</h3>
+<h2>?0</h2>
+</div>
+
+<div class="card">
+<h3>Today's Profit</h3>
+<h2>?0</h2>
+</div>
+
+<div class="card">
+<h3>Branches</h3>
+<h2 id="branchCount">0</h2>
+</div>
+
+</div>
+
+</div>
+
+<div id="branchView" class="hidden">
+
+<h2>Manage Branches</h2>
+
+<br>
+
+<button id="addSampleBranch">
+
+Create BR001
+
+</button>
+
+<br><br>
+
+<table border="1" cellpadding="10" width="100%">
+
+<thead>
+
+<tr>
+
+<th>ID</th>
+
+<th>Name</th>
+
+<th>Phone</th>
+
+<th>Status</th>
+
+</tr>
+
+</thead>
+
+<tbody id="branchTable">
+
+</tbody>
+
+</table>
+
+</div>
+
+</main>
+
+</div>
+
+<script type="module"
+src="js/dashboard.js">
+
+</script>
+
+</body>
+
+</html>
