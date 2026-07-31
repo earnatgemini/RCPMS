@@ -3,159 +3,267 @@
 
 <head>
 
-<meta charset="UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta name="viewport"
-content="width=device-width, initial-scale=1.0">
+    <title>RCPMS Dashboard</title>
 
-<title>Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link rel="preconnect"
-href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
 
-<link rel="preconnect"
-href="https://fonts.gstatic.com"
-crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
-rel="stylesheet">
-
-<link rel="stylesheet"
-href="css/style.css">
-
-<link rel="stylesheet"
-href="css/dashboard.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/utilities.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
 
 </head>
 
 <body>
 
-<div class="dashboard">
+    <div class="dashboard">
 
-<aside class="sidebar">
+        <!-- Sidebar -->
 
-<h2>RCPMS</h2>
+        <aside class="sidebar">
 
-<nav>
+            <div>
 
-<a href="#">?? Dashboard</a>
+                <h2>🍛 Rajeswari</h2>
 
-<a href="#">?? Stock</a>
+                <p class="sidebar-title">
+                    Curry Point
+                </p>
 
-<a href="#">?? Sales</a>
+            </div>
 
-<a href="#">?? Expenses</a>
+            <nav>
 
-<a href="#">?? Employees</a>
+                <a href="#" id="dashboardMenu">🏠 Dashboard</a>
 
-<a href="#">?? Reports</a>
+                <a href="#" id="branchesMenu">🏪 Branches</a>
 
-<a href="#" id="manageBranches">
-?? Branches
-</a>
+                <a href="#">👨‍🍳 Employees</a>
 
-<a href="#" id="sideLogoutBtn">
-?? Logout
-</a>
+                <a href="#">🍲 Today's Menu</a>
 
-</nav>
+                <a href="#">📦 Stock</a>
 
-</aside>
+                <a href="#">💰 Sales</a>
 
-<main class="content">
+                <a href="#">📝 Credits</a>
 
-<div class="topbar">
+                <a href="#">💵 Expenses</a>
 
-<div>
+                <a href="#">📅 Attendance</a>
 
-<h1>Dashboard</h1>
+                <a href="#">💼 Salary</a>
 
-<p id="userEmail"></p>
+                <a href="#">📊 Reports</a>
 
-</div>
+            </nav>
 
-<button id="topLogoutBtn">
-Logout
-</button>
+            <button class="logout-btn" id="sideLogoutBtn">
 
-</div>
+                Logout
 
-<div id="dashboardView">
+            </button>
 
-<div class="cards">
+        </aside>
 
-<div class="card">
-<h3>Today's Sales</h3>
-<h2>?0</h2>
-</div>
+        <!-- Main -->
 
-<div class="card">
-<h3>Today's Expenses</h3>
-<h2>?0</h2>
-</div>
+        <main class="content">
 
-<div class="card">
-<h3>Today's Profit</h3>
-<h2>?0</h2>
-</div>
+            <!-- Top Bar -->
 
-<div class="card">
-<h3>Branches</h3>
-<h2 id="branchCount">0</h2>
-</div>
+            <header class="topbar">
 
-</div>
+                <div>
 
-</div>
+                    <h1 id="pageTitle">
 
-<div id="branchView" class="hidden">
+                        Dashboard
 
-<h2>Manage Branches</h2>
+                    </h1>
 
-<br>
+                    <p id="userEmail"></p>
 
-<button id="addSampleBranch">
+                </div>
 
-Create BR001
+                <button class="logout-btn" id="topLogoutBtn">
 
-</button>
+                    Logout
 
-<br><br>
+                </button>
 
-<table border="1" cellpadding="10" width="100%">
+            </header>
 
-<thead>
+            <!-- Dashboard -->
 
-<tr>
+            <section id="dashboardView">
 
-<th>ID</th>
+                <div class="cards">
 
-<th>Name</th>
+                    <div class="card">
 
-<th>Phone</th>
+                        <h3>Total Branches</h3>
 
-<th>Status</th>
+                        <h2 id="branchCount">
 
-</tr>
+                            0
 
-</thead>
+                        </h2>
 
-<tbody id="branchTable">
+                    </div>
 
-</tbody>
+                    <div class="card">
 
-</table>
+                        <h3>Today's Sales</h3>
 
-</div>
+                        <h2>
 
-</main>
+                            ₹0
 
-</div>
+                        </h2>
 
-<script type="module"
-src="js/dashboard.js">
+                    </div>
 
-</script>
+                    <div class="card">
+
+                        <h3>Today's Expenses</h3>
+
+                        <h2>
+
+                            ₹0
+
+                        </h2>
+
+                    </div>
+
+                    <div class="card">
+
+                        <h3>Today's Profit</h3>
+
+                        <h2>
+
+                            ₹0
+
+                        </h2>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- Branch Management -->
+
+            <section id="branchView" class="hidden">
+
+                <h2>
+
+                    Branch Management
+
+                </h2>
+
+                <form id="branchForm">
+
+                    <input type="hidden" id="branchId">
+
+                    <div class="form-group">
+
+                        <label>
+
+                            Branch Name
+
+                        </label>
+
+                        <input
+                            type="text"
+                            id="branchName"
+                            required>
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label>
+
+                            Phone
+
+                        </label>
+
+                        <input
+                            type="text"
+                            id="branchPhone"
+                            required>
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label>
+
+                            Address
+
+                        </label>
+
+                        <input
+                            type="text"
+                            id="branchAddress"
+                            required>
+
+                    </div>
+
+                    <button
+                        type="submit"
+                        class="save-btn">
+
+                        Save Branch
+
+                    </button>
+
+                </form>
+
+                <table class="table">
+
+                    <thead>
+
+                        <tr>
+
+                            <th>ID</th>
+
+                            <th>Name</th>
+
+                            <th>Phone</th>
+
+                            <th>Action</th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody id="branchTable">
+
+                    </tbody>
+
+                </table>
+
+            </section>
+
+        </main>
+
+    </div>
+
+    <script
+        type="module"
+        src="js/dashboard.js">
+
+    </script>
 
 </body>
 
