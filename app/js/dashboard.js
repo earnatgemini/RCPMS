@@ -4,9 +4,11 @@ import { auth } from "./firebase.js";
 import {
     addBranch,
     getBranches,
+    updateBranch,
     deleteBranch,
-    getEmployees
-    } from "./firestore.js";
+    getEmployees,
+    getNextBranchId
+} from "./firestore.js";
 import {
     onAuthStateChanged,
     signOut
