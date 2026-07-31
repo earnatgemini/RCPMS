@@ -34,6 +34,26 @@ export async function getBranches() {
 
 }
 
+export async function getNextBranchId(){
+
+    const branches = await getBranches();
+
+    let max = 0;
+
+    branches.forEach(branch=>{
+
+        const no=parseInt(
+            branch.branchId.replace("BR","")
+        );
+
+        if(no>max) max=no;
+
+    });
+
+    return "BR"+String(max+1).padStart(3,"0");
+
+}
+
 // Update Branch
 export async function updateBranch(branchId, data) {
 
