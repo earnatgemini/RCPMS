@@ -1,5 +1,5 @@
 "use strict";
-
+import { db } from "./firebase.js";
 import {
     collection,
     doc,
